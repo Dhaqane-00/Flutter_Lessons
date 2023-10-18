@@ -552,7 +552,7 @@ class _Home1State extends State<Home1> {
                         decoration: const BoxDecoration(),
                         child: const Icon(
                           IconlyBold.add_user,
-                          color: Colors.black,
+                          color: Colors.red,
                         ),
                       ),
                       const SizedBox(
