@@ -15,7 +15,6 @@ class Home1 extends StatefulWidget {
 
 class _Home1State extends State<Home1> {
   String name = "Sign in";
-  Icons iconlyn = Icons(IconlyBroken.logout);
   @override
   Widget build(BuildContext context) {
     // final currentWidth = MediaQuery.of(context).size.width;
@@ -552,7 +551,7 @@ class _Home1State extends State<Home1> {
                         width: 40,
                         decoration: const BoxDecoration(),
                         child: Icon(
-                          "$iconlyn",
+                          ,
                           color: Colors.black,
                         ),
                       ),
