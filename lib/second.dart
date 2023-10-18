@@ -14,7 +14,10 @@ class Home1 extends StatefulWidget {
 }
 
 class _Home1State extends State<Home1> {
+  // ignore: prefer_const_constructors
+  Icon thn = Icon(IconlyBroken.setting);
   String name = "Sign in";
+  Color bgcolor = Colors.pink.shade100;
   @override
   Widget build(BuildContext context) {
     // final currentWidth = MediaQuery.of(context).size.width;
@@ -293,8 +296,9 @@ class _Home1State extends State<Home1> {
                 child: Container(
                   height: 50,
                   width: 411,
-                  decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 254, 178, 178)),
+                  decoration: BoxDecoration(
+                    color: bgcolor,
+                  ),
                   child: Row(
                     children: [
                       Container(
@@ -551,8 +555,8 @@ class _Home1State extends State<Home1> {
                         width: 40,
                         decoration: const BoxDecoration(),
                         child: const Icon(
-                          IconlyBold.add_user,
-                          color: Colors.red,
+                          IconlyBroken.user_2,
+                          color: Colors.black,
                         ),
                       ),
                       const SizedBox(
@@ -581,6 +585,12 @@ class _Home1State extends State<Home1> {
                             icon: const Icon(IconlyBroken.arrow_right_square),
                             onPressed: () {
                               name = ("Sign out");
+                              bgcolor = Colors.purple;
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Color Has Changed'),
+                                ),
+                              );
                               setState(() {});
                             },
                           ),
