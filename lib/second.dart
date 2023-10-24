@@ -3,6 +3,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:project/main.dart';
 import 'package:iconly/iconly.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
@@ -584,14 +585,7 @@ class _Home1State extends State<Home1> {
                           child: IconButton(
                             icon: const Icon(IconlyBroken.arrow_right_square),
                             onPressed: () {
-                              name = ("Sign out");
-                              bgcolor = Colors.purple;
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('Color Has Changed'),
-                                ),
-                              );
-                              setState(() {});
+                              Navigator.of(context).pop();
                             },
                           ),
                         ),

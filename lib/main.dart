@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:project/Ass.dart';
 // ignore: unused_import
 import 'package:project/second.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Ass(),
+    routes: {
+      "/": (context) => const Home(),
+      "Frist": (context) => const Home1(),
+    },
   ));
 }
 
@@ -228,7 +230,9 @@ class Home extends StatelessWidget {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed("Frist");
+          },
           child: const Icon(Icons.add),
         ),
       ),
