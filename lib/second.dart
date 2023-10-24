@@ -8,7 +8,8 @@ import 'package:iconly/iconly.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class Home1 extends StatefulWidget {
-  const Home1({super.key});
+  final String? names;
+  const Home1({super.key, this.names});
 
   @override
   State<Home1> createState() => _Home1State();
@@ -34,7 +35,7 @@ class _Home1State extends State<Home1> {
         ],
       ),
       appBar: AppBar(
-        title: const Text("Profile"),
+        title: Text("Hello,$names"),
         backgroundColor: const Color(0xffFF4B91),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(IconlyBold.setting))

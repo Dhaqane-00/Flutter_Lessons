@@ -231,7 +231,12 @@ class Home extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Navigator.of(context).pushNamed("Frist");
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                  builder: (context) => const Home1(
+                        name1: 'Abdilaahi Mowliid',
+                      )),
+            );
           },
           child: const Icon(Icons.add),
         ),
